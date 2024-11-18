@@ -1,0 +1,54 @@
+        <div class="col px-5" style="background-color: #3B3B3B;">
+            <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">W Catalog</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="/">Cadastrar Obras</a>
+                            <a class="nav-link" href="/consulta">Consultar Obras</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="col p-5 text-white">
+            <p class="text-start fs-5">Editar Obra</p>
+            <p class="text-start fs-6">Sistema Utilizado para Catalogação de peças músicais</p>
+            <p>
+                <form action="/atualizar" method="POST">
+                <input type="hidden" class="form-control" id="id" name="id" value="{{data.id}}">
+                    <div class="mb-3 text-start">
+                        <label class="form-label">Nome da Obra:</label>
+                        <input type="text" name="nome_obra" class="form-control" id="nome_obra" value="{{data.nome_obra}}">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label class="form-label">Compositor:</label>
+                        <input type="text" name="composer" class="form-control" id="composer" value="{{data.composer}}">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label class="form-label">Catalogação:</label>
+                        <input type="text" name="catalog" class="form-control" id="catalog" value="{{data.catalog}}">
+                    </div>
+                    <div class="mb-3 text-start">
+                    <label class="form-label">Ano de lançamento:</label>
+                        <input type="text" name="data_lancamento" class="form-control" id="data_lancamento" value="{{data.data_lancamento}}">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label class="form-label">Descrição da obra:</label>
+                        <textarea name="descricao" class="form-control" placeholder="" id="descricao" style="height: 100px">{{data.descricao}}</textarea>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <button type="submit" style="background-color: #3B3B3B;" class="btn text-white">Editar</button>
+                    </div>
+                </form>
+            </p>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+</div>

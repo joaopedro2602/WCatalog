@@ -1,0 +1,52 @@
+        <div class="col px-5" style="background-color: #3B3B3B;">
+            <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">W Catalog</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" aria-current="page" href="/">Cadastrar Obras</a>
+                            <a class="nav-link active" href="/consulta">Consultar Obras</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="col px-5">
+            <p class="text-start fs-5">Consultar Obras</p>
+            <p class="text-start fs-6">Sistema Utilizado para Catalogação de peças músicais</p>
+            <p>
+                <table class="table text-white">
+            <thead>
+                <tr>
+                    <th>Nome da Obra</th>
+                    <th>Compositor</th>
+                    <th>Catalogação</th>
+                    <th>Ano de lançamento</th>
+                    <th>Descrição da obra</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <td>{{this.nome_obra}}</td>
+                    <td>{{this.composer}}</td>
+                    <td>{{this.catalog}}</td>
+                    <td>{{this.data_lancamento}}</td>
+                    <td>{{this.descricao}}</td>
+                    <td>
+                        <a href="/editar/{{id}}"><button class="btn text-white" style="background-color: #3B3B3B;">Editar</button></a>
+                        <a href="/excluir/{{id}}"><button class="btn btn-danger">Excluir</button></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+            </p>
+        </div>
+        
+    
