@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">W Catalog</string>
+    <string name="default_web_client_id">firebase-adminsdk-nyp2v@node-project-b2903.iam.gserviceaccount.com</string>
 </resources>
